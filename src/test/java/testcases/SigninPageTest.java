@@ -24,7 +24,7 @@ public class SigninPageTest {
 		
 		System.setProperty("webdriver.chrome.driver", path+"\\src\\test\\resources\\drivers\\chromeDriver\\chromedriver.exe");
 
-		driver = new ChromeDriver();
+		//driver = new ChromeDriver();
 		//driver.get("https://opensource-demo.orangehrmlive.com/");
 	
 	}
