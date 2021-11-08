@@ -54,5 +54,24 @@ public class SigninPageTest {
 		driver.findElement(By.xpath("//input[@id='btnLogin']")).click();
 		
 	}
+	
+	@Test()
+	public static void testAmazon() throws InterruptedException{
+		
+		driver = new ChromeDriver();
+		
+		driver.get("https://www.amazon.in");
+		
+		//driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
+		
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+		
+		driver.findElement(By.xpath("//input[@id='twotabsearchtextbox']")).sendKeys("Water bottel");
+		
+		driver.findElement(By.xpath("//input[@id='nav-search-submit-button']")).click();
+		
+		Thread.sleep(5000);
+	}
+	
 
 }
