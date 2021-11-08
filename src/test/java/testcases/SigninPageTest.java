@@ -43,30 +43,47 @@ public class SigninPageTest {
 		
 		driver = new ChromeDriver();
 		
+		System.out.println("Site will open ORANGE!");
+
 		driver.get("https://opensource-demo.orangehrmlive.com/");
 		
+		System.out.println("Site is open !");
 		//driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
 		
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 		
 		driver.findElement(By.xpath("//input[@id='txtUsername']")).sendKeys("admin");
-		driver.findElement(By.xpath("//input[@id='txtPassword']")).sendKeys("admin123");
-		driver.findElement(By.xpath("//input[@id='btnLogin']")).click();
+		System.out.println("admin username Entered !");
 		
+		driver.findElement(By.xpath("//input[@id='txtPassword']")).sendKeys("admin123");
+		System.out.println("password entered !");
+
+		driver.findElement(By.xpath("//input[@id='btnLogin']")).click();
+
+		System.out.println("Button clicked !");
+
 	}
 	
 	@Test()
 	public static void testAmazon() throws InterruptedException{
 		
 		driver = new ChromeDriver();
-		
+
+
+		System.out.println("Site will open AMAZON!");
 		driver.get("https://www.amazon.in");
 		
 		//driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
 		
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 		
+
+		System.out.println("Enter in search box!");
+		
 		driver.findElement(By.xpath("//input[@id='twotabsearchtextbox']")).sendKeys("Water bottel");
+		
+
+		System.out.println("Search button clicked!");
 		
 		driver.findElement(By.xpath("//input[@id='nav-search-submit-button']")).click();
 		
